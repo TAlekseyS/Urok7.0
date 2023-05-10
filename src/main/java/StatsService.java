@@ -10,7 +10,18 @@ public class StatsService {
     }
 
 
-    public int avarageAmountMoney(int[] months) {
+    public int avarage(int[] months) {
+        int allMoney = amountMoney(months);
+        int avarageMoney = 0;
+        int i = 0;
+        for (; i < months.length; i++) {
+            // allMoney = allMoney + months[i];
+        }
+        avarageMoney = allMoney / i;
+        return avarageMoney;
+    }
+
+   /* public int avarageAmountMoney(int[] months) {
         int allMoney = 0;
         int avarageMoney = 0;
         int i = 0;
@@ -20,6 +31,8 @@ public class StatsService {
         avarageMoney = allMoney / i;
         return avarageMoney;
     }
+
+    */
 
     public int numberMonthHighSale(int[] months) {
         int maxMonth = 0;
@@ -45,7 +58,24 @@ public class StatsService {
         return minMonth;
     }
 
-    public int amountMonthBelowAvarageSale(int[] months) {
+    public int amount(int[] months) {
+        int allMoney = amountMoney(months);
+        int minMonth = 0;
+        int avarageMoney = avarage(months);
+        int i = 0;
+        for (; i < months.length; i++) {
+            //allMoney = allMoney + months[i];
+        }
+        //avarageMoney = allMoney / i;
+        for (i = 0; i < months.length; i++) {
+            if (months[i] < avarageMoney) {
+                minMonth++;
+            }
+        }
+        return minMonth;
+    }
+
+    /* public int amountMonthBelowAvarageSale(int[] months) {
         int allMoney = 0;
         int minMonth = 0;
         int avarageMoney = 0;
@@ -62,7 +92,9 @@ public class StatsService {
         return minMonth;
     }
 
-    public int amountMonthHighAvarageSale(int[] months) {
+     */
+
+    /* public int amountMonthHighAvarageSale(int[] months) {
         int allMoney = 0;
         int maxMonth = 0;
         int avarageMoney = 0;
@@ -71,6 +103,25 @@ public class StatsService {
             allMoney = allMoney + months[i];
         }
         avarageMoney = allMoney / i;
+        for (i = 0; i < months.length; i++) {
+            if (months[i] > avarageMoney) {
+                maxMonth++;
+            }
+        }
+        return maxMonth;
+    }
+
+     */
+
+    public int amount2(int[] months) {
+        int allMoney = amountMoney(months);
+        int maxMonth = 0;
+        int avarageMoney = avarage(months);
+        int i = 0;
+        for (; i < months.length; i++) {
+           // allMoney = allMoney + months[i];
+        }
+        //avarageMoney = allMoney / i;
         for (i = 0; i < months.length; i++) {
             if (months[i] > avarageMoney) {
                 maxMonth++;
