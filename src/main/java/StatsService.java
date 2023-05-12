@@ -59,13 +59,13 @@ public class StatsService {
     }
 
     public int amount(int[] months) {
-        int allMoney = amountMoney(months);
+        //int allMoney = amountMoney(months);
         int minMonth = 0;
         int avarageMoney = avarage(months);
         int i = 0;
-        for (; i < months.length; i++) {
+        //for (; i < months.length; i++) {
             //allMoney = allMoney + months[i];
-        }
+       // }
         //avarageMoney = allMoney / i;
         for (i = 0; i < months.length; i++) {
             if (months[i] < avarageMoney) {
@@ -114,13 +114,13 @@ public class StatsService {
      */
 
     public int amount2(int[] months) {
-        int allMoney = amountMoney(months);
+       // int allMoney = amountMoney(months);
         int maxMonth = 0;
         int avarageMoney = avarage(months);
         int i = 0;
-        for (; i < months.length; i++) {
+       // for (; i < months.length; i++) {
            // allMoney = allMoney + months[i];
-        }
+        //}
         //avarageMoney = allMoney / i;
         for (i = 0; i < months.length; i++) {
             if (months[i] > avarageMoney) {
